@@ -1,0 +1,101 @@
+---
+title: "R for Exploring and Cleaning Road Casualty Data"
+author: "[Student Data Labs](https://studentdatalabs.com), Vision Zero Innovation Lab"
+output: html_document
+---
+In this demo we'll be cleaning and exploring our datasets. This will involve: reading in data, merging datasets, renaming values, performing some basic data exploration and visualisation before creating a new file containing pedestrian casualty data.
+
+The tutorial is intended for Data Lab Volunteers who are new to R. It forms part of the Vision Zero Innovation Lab in Leeds.
+
+First, you need to download the open data from the Student Data Labs [Github page](https://github.com/StudentDataLabs/VisionZeroInnovationLab). From here, Download ZIP, after which point you need to tell R where to find the data. To do this - Select 'Session' along the top of RStudio, then 'Set Working Directory' and 'Choose Directory'. 
+
+Read in the five datasets from 2009 to 2014
+```{r}
+leeds_14 <- read.csv("leeds-2014.csv", header = TRUE, stringsAsFactors = FALSE)
+leeds_13 <- read.csv("leeds-2013.csv", header = TRUE, stringsAsFactors = FALSE)
+leeds_12 <- read.csv("leeds-2012.csv", header = TRUE, stringsAsFactors = FALSE)
+leeds_11 <- read.csv("leeds-2011.csv", header = TRUE, stringsAsFactors = FALSE)
+leeds_10 <- read.csv("leeds-2010.csv", header = TRUE, stringsAsFactors = FALSE)
+leeds_09 <- read.csv("leeds-2009.csv", header = TRUE, stringsAsFactors = FALSE)
+```
+
+Next, we need to merge the five datasets vertically using rbind and store them as 'accidents'
+```{r}
+accidents <- rbind(leeds_09,leeds_10,leeds_11,leeds_12,leeds_13,leeds_14)
+```
+
+First, since the data entry for each year was different, we're going to ensure that the Casualty Class column is consistent across all years. For example, where 'Driver' was entered, our dataset will now read '1'. To find out more, visit the 'guidance' file on github.
+```{r}
+accidents[accidents$Casualty.Class == "Driver",]$Casualty.Class = 1
+accidents[accidents$Casualty.Class == "Passenger",]$Casualty.Class = 2
+accidents[accidents$Casualty.Class == "Pedestrian",]$Casualty.Class = 3
+```
+
+Do the same for Casualty Severity
+```{r}
+accidents[accidents$Casualty.Severity == "Fatal",]$Casualty.Severity = 1
+accidents[accidents$Casualty.Severity == "Serious",]$Casualty.Severity = 2
+accidents[accidents$Casualty.Severity == "Slight",]$Casualty.Severity = 3
+```
+
+And finally Sex of Casualty. When it comes to performing regression, we might also want to change the columns containing Weather Conditions, Lighting and Road Surface but this is for another time
+```{r}
+accidents[accidents$Sex.of.Casualty == "Male",]$Sex.of.Casualty = 1
+accidents[accidents$Sex.of.Casualty == "Female",]$Sex.of.Casualty = 2
+```
+
+Now, let's check the first few rows of the dataset
+```{r}
+head(accidents)
+```
+
+Let's create a table showing a breakdown of number of incidents for each age
+```{r}
+table(accidents$Age.of.Casualty)
+```
+
+As you can see, age is a continuous variable. Let's break the numbers down to easier chunks (e.g. 20-30, 30-40 etc)
+```{r}
+accidents$Age.of.Casualty[accidents$Age.of.Casualty < 10 & accidents$Age.of.Casualty >= 0] <- "0-10"
+accidents$Age.of.Casualty[accidents$Age.of.Casualty < 20 & accidents$Age.of.Casualty >= 10] <- "10-20"
+accidents$Age.of.Casualty[accidents$Age.of.Casualty < 30 & accidents$Age.of.Casualty >= 20] <- "20-30"
+accidents$Age.of.Casualty[accidents$Age.of.Casualty < 40 & accidents$Age.of.Casualty >= 30] <- "30-40"
+accidents$Age.of.Casualty[accidents$Age.of.Casualty < 50 & accidents$Age.of.Casualty >= 40] <- "40-50"
+accidents$Age.of.Casualty[accidents$Age.of.Casualty < 60 & accidents$Age.of.Casualty >= 50] <- "50-60"
+accidents$Age.of.Casualty[accidents$Age.of.Casualty < 70 & accidents$Age.of.Casualty >= 60] <- "60-70"
+accidents$Age.of.Casualty[accidents$Age.of.Casualty < 80 & accidents$Age.of.Casualty >= 70] <- "70-80"
+accidents$Age.of.Casualty[accidents$Age.of.Casualty >= 80] <- "80+"
+```
+
+Next, a table showing a breakdown of numbers for both sexes, where 1 equals Male and 2 is Female
+```{r}
+table(accidents$Sex.of.Casualty)
+```
+
+Create a table showing a breakdown of percentages by sex and casualty class. In terms of Casualty Class, 1 is Driver, 2 equates to Passenger and 3 to Pedestrian
+```{r}
+prop.table(table(accidents$Sex.of.Casualty, accidents$Casualty.Class),1)
+```
+
+Here, we'll create a quick bar chart showing the number of casualties by age using the base graphics package. We'll set the x-axis label using xlab and the y-axis label using ylab. The ylim function sets the limits of the y-axis and main allows us to set the title of the plot
+```{r, echo=FALSE}
+counts <- table(accidents$Age.of.Casualty)
+barplot(counts, xlab='Age', ylab='Count', ylim=c(0,5000), main='Road Traffic Casualties by Age', col="red")
+```
+
+Next, we will create a subset containing all the pedestrian casualties
+```{r}
+pedestrian <-subset(accidents, Casualty.Class = 3)
+```
+
+To create a new csv file containing the new dataset in the directory, use the code below. We can later use this file to investigate pedestrian casualties
+```{r}
+write.csv(pedestrian, file = "pedestrian_casualties_2009-2014.csv")
+```
+
+## Summary
+And that's the end of this tutorial on data exploration and cleansing. This is one part of a series of practical data demos that Student Data Labs is running as part of the Vision Zero Innovation Lab. As a future exercise - take the new pedestrian_casualties file and explore the data, create some visualisations and analysis.
+
+Please be aware that this is not exhaustive. You are meant to use these practical tutorials as a spingboard to continue your learning and carry out your own analyses.
+
+![](https://studentdatalabs.files.wordpress.com/2016/01/newlogo4-e1460235034568.png)

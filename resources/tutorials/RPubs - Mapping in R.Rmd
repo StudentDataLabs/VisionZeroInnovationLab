@@ -1,0 +1,56 @@
+---
+title: "Mapping Cycling Crashes in R"
+author: "[Student Data Labs](https://studentdatalabs.com), Vision Zero Innovation Lab"
+output: html_document
+---
+In this practical demo we'll be creating a dot density map to show the location of bicycle casualties in Leeds from 2009-2014. This is intended for beginner and intermediate R users, who may or may not have some experience in data visualisation or mapping. This has been created as part of the Vision Zero Innovation Lab.
+
+
+First, we need to install the packages we'll be working with - ggmap and ggplot2. The first is used for mapping and spatial analysis. The second, ggplot2, is a great package for visualising data. Don't worry about the code beneath, this is simply to show what to expect on the console.
+```{r}
+install.packages("ggmap", repos = "http://cran.us.r-project.org")
+library(ggmap)
+```
+
+```{r}
+install.packages("ggplot2", repos = "http://cran.us.r-project.org")
+library(ggplot2)
+```
+
+First, you need to download the open data from the Student Data Labs [Github page](https://github.com/StudentDataLabs/VisionZeroInnovationLab). From here, Download ZIP, after which point you need to tell R where to find the data. To do this - Select 'Session' along the top of RStudio, then 'Set Working Directory' and 'Choose Directory'. 
+
+Now read in our dataset that contains all road traffic casualties in Leeds from 2009-2014. This open dataset has been cleaned and contains duplicates as well as Latitude and Longitude columns. 
+```{r}
+road <- read.csv("accidents_2009-2014_duplicates_mapping.csv", header = TRUE, stringsAsFactors = FALSE)
+```
+
+
+Create a subset containing the bicycle casualties.
+```{r}
+bicycles <- subset(road, Type.of.Vehicle == "1")
+```
+
+
+We're now setting the map design, zoom level and location. You can play around with different colours, zoom levels and so on. Below the code you'll see some of the code that is generated in the console of R Studio - you don't need to worry about that, however.
+```{r, results='hide'}
+map.leeds <- qmap("leeds", source="stamen", zoom=13, maptype="toner", lighten=c(.9, "#BBBBBB"))
+```
+
+
+Let's create our dot density map!
+```{r, fig.width = 7, fig.height = 7}
+map.leeds +
+  geom_point(data=bicycles, aes(x=Longitude, y=Latitude, size=Number.of.Casualties, color=Number.of.Casualties), alpha=.4, na.rm=T) +
+  scale_color_gradient(low="#feb24c", high="#f03b20", name="", breaks = c(1,2,3)) + # Set the colour gradient
+  scale_size(range=c(1,3), name="", breaks = c(1,2,3)) + # Set the scale from the lowest (1) to the highest (12)
+  ggtitle("BICYCLE CASUALTIES, LEEDS 2009-2014") + # Create our title
+  theme(text = element_text(family = "Helvetica", color="#666666")) + # Set the font and colour of our title
+  theme(plot.title = element_text( size=17, face="bold", hjust=0, vjust=.6)) + # Add some more elements to the title
+  guides(colour = guide_colourbar(order = 1), alpha = guide_legend(order = 2)) + # This tells R where to position the legends relative to one another
+  theme(legend.position="bottom", legend.box = "horizontal") # This line of code positions the legends at bottom rather than the side 
+```
+
+## Summary
+There we have it! This is one part of a series of practical data demos that Student Data Labs is running as part of the Vision Zero Innovation Lab. 
+
+![](https://studentdatalabs.files.wordpress.com/2016/01/newlogo4-e1460235034568.png)
