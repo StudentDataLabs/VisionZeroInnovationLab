@@ -8,7 +8,7 @@ Student Data Labs runs data-driven Innovation Labs for university students to le
 The Vision Zero Innovation Lab is split into two sections: a Learning Lab and a Innovation Lab. The Learning Lab helps students learn real-world data skills - getting them up and running with tools like R as well as common data science problems as part of a team. The Innovation Lab is more experimental, where the aim is to develop ideas and data-driven tools to take on wicked problems.
 
 
-##Datasets
+##Data
 The Labs make use of open data - that is, data that has been made open and freely available to the public. We are using open data from [Leeds Data Mill](http://leedsdatamill.org/), some of which was created Student Data Labs and other that have been cleansed before the event.
 
 ##Resources
