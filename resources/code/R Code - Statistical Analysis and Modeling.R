@@ -1,7 +1,8 @@
 install.packages("ggplot2")
 library(ggplot2)
 
-# Read in our data
+# Set the working directory and read in our data
+setwd("M:/VisionZeroInnovationLab-master/data")
 road <- read.csv("accidents_2009-2014_duplicates_mapping.csv", header = TRUE, stringsAsFactors = FALSE)
 
 # Inspect first few rows
