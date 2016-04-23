@@ -1,7 +1,8 @@
 install.packages("ggmap")
 library(ggmap)
 
-# Read in the data
+# Set the working directory and read in the data
+setwd("M:/VisionZeroInnovationLab-master/data")
 accidents <- read.csv("accidents_2009-2014_duplicates_mapping.csv", header = TRUE, stringsAsFactors = FALSE)
 
 # Set the map centre
