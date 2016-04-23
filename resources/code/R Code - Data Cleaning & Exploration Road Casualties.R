@@ -1,4 +1,5 @@
-# Read in our datasets
+# Set the working directory and read in our datasets
+setwd("M:/VisionZeroInnovationLab-master/data")
 leeds_14 <- read.csv("leeds-2014.csv", header = TRUE, stringsAsFactors = FALSE)
 leeds_13 <- read.csv("leeds-2013.csv", header = TRUE, stringsAsFactors = FALSE)
 leeds_12 <- read.csv("leeds-2012.csv", header = TRUE, stringsAsFactors = FALSE)
