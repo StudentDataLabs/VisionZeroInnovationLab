@@ -5,7 +5,7 @@ library(ggmap)
 library(ggplot2)
 
 # Set the working directory and read in the data
-setwd("M:/VisionZeroInnovationLab-master/data") # If you are using a Mac, then you will need to change this line to: setwd("C:/VisionZeroInnovationLab-master/data")
+setwd("M:/VisionZeroInnovationLab-master/data") # If you are using a Mac, then you will need to change this line to: setwd("~/VisionZeroInnovationLab-master/data")
 road <- read.csv("accidents_2009-2014_duplicates_mapping.csv",header = TRUE,stringsAsFactors = FALSE)
 
 # Create a subset containing bicycle crashes
