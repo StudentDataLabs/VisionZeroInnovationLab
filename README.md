@@ -16,7 +16,7 @@ Under Resources, you will find learning materials that will help with those look
 2. [Mapping Cycling Crashes in R](https://rpubs.com/StudentDataLabs/Mapping-Cycling-Crashes).
 3. [Statistical Analysis and Modeling Road Traffic Casualties](https://rpubs.com/StudentDataLabs/Exploring-Cleaning-Data).
 
-You can also check out the resources from our [Health Innovation Lab](https://www.dropbox.com/sh/lpn47z908p8lbub/AAC0f3EaGEzeK_NvjU24NEjUa?dl=0), which contains similar tools and videos.
+You can also check out the resources from our [Health Innovation Lab](https://www.dropbox.com/sh/lpn47z908p8lbub/AAC0f3EaGEzeK_NvjU24NEjUa?dl=0), which contains more tools, projects and videos.
 
 ##Projects
 The Vision Zero Innovation Lab is a place for volunteers to develop data-driven projects and exchange ideas. Data Lab Volunteers can use the Lab to build tools such as apps, maps or more conceptual ideas and designs. Once the Lab has finished, the projects will be presented to a number of stakeholders including Leeds City Council. Student Data Labs also works with volunteers on developing longer-term civic projects.
