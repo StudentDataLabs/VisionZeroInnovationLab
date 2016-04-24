@@ -132,3 +132,6 @@ Properties > Style > Heatmap
 From here, you can choose the colour and set the density. Since we are interested in finding hotspots, it's generally better to lower the density.
 
 To export the map, follow [this link](http://docs.qgis.org/2.0/en/docs/user_manual/print_composer/print_composer.html) to find out more about Print Composer
+
+##Summary
+You've made it to the end of the Vision Zero Innovation Lab tutorials! It may seem a little daunting but don't be discouraged - data science is a very expansive discipline that anyone can pick up with practice. Here at Student Data Labs, we take a project-orientated approach to learning the kinds of skills that you will encounter out there in the real world. These demos are by no means exhaustive so we would advise you to use them as a springboard onto further learning. In follow-up Labs we will build on the skills you have developed here.
