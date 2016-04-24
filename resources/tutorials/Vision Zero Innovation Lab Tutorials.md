@@ -104,7 +104,7 @@ The code and demos have been published online to RPubs. The links can be found b
 
 2.	[Mapping Cycling Crashes in R](https://rpubs.com/StudentDataLabs/Mapping-Cycling-Crashes)
 
-3.	[Statistical Analysis and Modeling](http://rpubs.com/StudentDataLabs/174376)
+3.	[Statistical Analysis and Modeling](http://rpubs.com/StudentDataLabs/Statistical-Analysis-Modelling)
 
 ##DEMO 5 – Mapping in QGIS
 
