@@ -1,5 +1,12 @@
-# Set the working directory and read in our datasets
-setwd("M:/VisionZeroInnovationLab-master/data") # If you are using a Mac, then you will need to change this line to: setwd("~/Downloads/VisionZeroInnovationLab-master/data")
+# First, you need to download the Github repository, which contains our data
+
+# If you're using windows - set the working directory
+setwd("M:/VisionZeroInnovationLab-master/data") # If an error message appears then use setwd("C:/VisionZeroInnovationLab-master/data")
+
+# If you are using a Mac, then you will need to use this line to set the working directory: 
+setwd("~/Downloads/VisionZeroInnovationLab-master/data")
+
+# Read in the 5 datasets from 2009-2014
 leeds_14 <- read.csv("leeds-2014.csv", header = TRUE, stringsAsFactors = FALSE)
 leeds_13 <- read.csv("leeds-2013.csv", header = TRUE, stringsAsFactors = FALSE)
 leeds_12 <- read.csv("leeds-2012.csv", header = TRUE, stringsAsFactors = FALSE)
@@ -83,7 +90,7 @@ accidents$Age.of.Casualty[accidents$Age.of.Casualty < 70 & accidents$Age.of.Casu
 accidents$Age.of.Casualty[accidents$Age.of.Casualty < 80 & accidents$Age.of.Casualty >= 70] <- '70-80'
 accidents$Age.of.Casualty[accidents$Age.of.Casualty < 98 & accidents$Age.of.Casualty >= 80] <- '80+’
 
-# Breakdown of numbers for each age bracket
+# Table of casualties by age
 table(accidents$Age.of.Casualty)
 
 # Breakdown of percentages by sex and age
@@ -96,20 +103,24 @@ barplot(counts, xlab='Age', ylab='Frequency', ylim=c(0,1000), main='Number of Ro
 # For Proportion breakdown of gender, for example
 prop.table(table(accidents$Sex.of.Casualty))
 
-# Histogram in ggplot2
+# Download the data visualisation package ggplot2
 install.packages("ggplot2")
 library(ggplot2)
-ggplot(accidents, aes(Age.of.Casualty)) +
-geom_histogram(binwidth=1, fill="#c0392b", alpha=0.75) +
-labs(title="Road Traffic Accident Casualties by Age", x="Age", y="Number of Accidents") + 
-theme(axis.text = element_text(size=14, family="Trebuchet MS")) +
+
+# Create a histogram
+ggplot(accidents, aes(Age.of.Casualty)) + # Initialise the plot
+geom_histogram(binwidth=1, fill="#c0392b", alpha=0.75) + # Set the colour and bar wideth
+labs(title="Road Traffic Accident Casualties by Age", x="Age", y="Number of Accidents") + # Give the chart a title and add axis labels
+theme(axis.text = element_text(size=14, family="Trebuchet MS")) + # Set the font size and type
 geom_hline(yintercept=0, size=0.4, color="black”))
 
 # Mosaic plot of Age and Sex of Casualty
 mosaicplot(accidents$Age.of.Casualty ~ accidents$Sex.of.Casualty, 
-          main="",
-          shade=FALSE, color=TRUE, xlab="Age", ylab="Sex")
+          main="", # Leave the plot title blank
+          shade=FALSE, color=TRUE, xlab="Age", ylab="Sex") # Add axis labels
 
-# Create subset for bicycle casualties and write to csv
+# Create subset for bicycle casualties
 bicycles <- subset(accidents, Type.of.Vehicle == 1)
+
+# Write the new subset to a csv file containing the bicycle casualties
 write.csv(bicycles, file = "Bicycles.csv")
