@@ -1,11 +1,18 @@
+# Install the two packages we need - ggmap for mapping and ggplot2 for data visualisation
 install.packages("ggmap")
-install.packages("ggplot2")
-
 library(ggmap)
+
+install.packages("ggplot2")
 library(ggplot2)
 
-# Set the working directory and read in the data
-setwd("M:/VisionZeroInnovationLab-master/data") # If you are using a Mac, then you will need to change this line to: setwd("~/Downloads/VisionZeroInnovationLab-master/data")
+# First, you need to download the Github repository, which contains our data
+
+# If you're using windows - set the working directory
+setwd("M:/VisionZeroInnovationLab-master/data") # If an error message appears then use setwd("C:/VisionZeroInnovationLab-master/data")
+
+# If you are using a Mac, then you will need to use this line to set the working directory: 
+setwd("~/Downloads/VisionZeroInnovationLab-master/data")
+
 road <- read.csv("accidents_2009-2014_duplicates_mapping.csv",header = TRUE,stringsAsFactors = FALSE)
 
 # Create a subset containing bicycle crashes
