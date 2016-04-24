@@ -42,6 +42,7 @@ I’d like you to be critical of the open data. Be aware of how the data is coll
 
 It is useful to know the context of the data and what each value and variable means. Thankfully, there is an option on Leeds Data Mill to download ‘Guidance’. This will help us understand the data better. Please spend some time looking at this as it will help later on.
 
+To get the data as well as other learning resources, you will need to go to the Vision Zero Innovation Lab [github page](https://github.com/StudentDataLabs/VisionZeroInnovationLab/), Download Zip and then unzip the folder. You can follow the tutorials in your browser.
 
 
 ##DEMO 3  -  Exploratory Data Analysis in Excel
