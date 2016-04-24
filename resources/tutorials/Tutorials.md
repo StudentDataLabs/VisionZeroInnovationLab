@@ -6,9 +6,9 @@ To access more information on the Vision Zero Lab, visit the Github page or chec
 
 #####Demo 1 – Asking Questions
 #####Demo 2 – Collecting Data
-#####Demo 3 – Exploratory Data Analysis - Excel
-#####Demo 4 - Data Exploration, Analysis, Modeling and Visualisation - R
-#####Demo 5 – Mapping - QGIS
+#####Demo 3 – Exploratory Data Analysis in Excel
+#####Demo 4 - Data Exploration, Analysis, Modeling and Visualisation in R
+#####Demo 5 – Mapping in QGIS
 
 ##DEMO 1   -  Asking Questions
 
