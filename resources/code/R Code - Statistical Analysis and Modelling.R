@@ -1,8 +1,13 @@
 install.packages("ggplot2")
 library(ggplot2)
 
-# Set the working directory and read in our data
-setwd("M:/VisionZeroInnovationLab-master/data") # If you are using a Mac, then you will need to change this line to: setwd("~/Downloads/VisionZeroInnovationLab-master/data")
+# If you're using windows - set the working directory
+setwd("M:/VisionZeroInnovationLab-master/data") # If an error message appears then use setwd("C:/VisionZeroInnovationLab-master/data")
+
+# If you are using a Mac, then you will need to use this line to set the working directory: 
+setwd("~/Downloads/VisionZeroInnovationLab-master/data")
+
+# Read in the data, tell R that that first row (the header) contains the columns
 road <- read.csv("accidents_2009-2014_duplicates_mapping.csv", header = TRUE, stringsAsFactors = FALSE)
 
 # Inspect first few rows
