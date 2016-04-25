@@ -16,6 +16,8 @@ The Vision Zero Innovation Lab plans to bring these principles to Leeds, with a 
 
 After conducting an analysis of road casualties in Leeds, there are a few takeaways to bear in mind - one is that the city is poorly designed for pedestrians and cyclists. Pedestrians comprise 33% of road deaths in Leeds, a figure that stands 10% higher than the national average. In addition, the number of cycling crashes in the city is rising. One focus of the Lab, therefore, is how can we make the city safer for pedestrians and cyclists?
 
+![](https://studentdatalabs.files.wordpress.com/2016/04/screen-shot-2016-04-16-at-21-54-23-e1461612829626.png)
+
 To find out more about the context of road casualties in Leeds, visit a [project](https://public.tableau.com/views/Story-RoadTrafficCasualtiesLeeds2009-2014/Story1?:embed=y&:display_count=yes&:showTabs=y) that was created last summer by a Data Lab Volunteer. As part of the Vision Zero Lab, two Casualty Hotspot maps have also been created: one [static](https://studentdatalabs.files.wordpress.com/2016/04/screen-shot-2016-04-16-at-21-54-23-e1461612829626.png) and another [interactive](https://liamboltonuk.cartodb.com/viz/f4f4c7fe-0b16-11e6-b285-0ecfd53eb7d3/embed_map).
 
 ##Data
