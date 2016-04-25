@@ -7,6 +7,13 @@ Student Data Labs runs data-driven Innovation Labs for university students to le
 
 The Vision Zero Innovation Lab is split into two sections: a Learning Lab and a Innovation Lab. The Learning Lab helps students learn real-world data skills - getting them up and running with tools like R as well as common data science problems as part of a team. The Innovation Lab is more experimental, where the aim is to develop ideas and data-driven tools to take on wicked problems.
 
+##The Problem
+Vision Zero is an international road safety project that was first pioneered in Sweden. The aim of the initiative is to reduce the number of road deaths and permanent injuries to zero. Acknowledging the accidents are unavoidable, it takes a systems design approach to road safety. This includes tackling the public health issue using engineering (designing safer cars and cities), education (encouraging road users to be more aware of pedestrians) as well as enforement (speed controls).
+
+The Vision Zero Innovation Lab plans to bring these principles to Leeds, with a distinct emphasis on the role data science is playing in transport. We will have demonstrations from the Leeds Institute for Transport Studies to give you an idea of what's being done in the city. 
+
+To find out more about the context of road casualties in Leeds, visit the [Road Traffic Casualties project](https://public.tableau.com/views/Story-RoadTrafficCasualtiesLeeds2009-2014/Story1?:embed=y&:display_count=yes&:showTabs=y). As part of the Vision Zero Lab, two Casualty Hotspot maps have been created: [static](https://studentdatalabs.files.wordpress.com/2016/04/screen-shot-2016-04-16-at-21-54-23.png) and [interactive](https://liamboltonuk.cartodb.com/viz/f4f4c7fe-0b16-11e6-b285-0ecfd53eb7d3/embed_map).
+
 ##Data
 The Labs make use of open data - that is, data that has been made open and freely available to the public. We are using open data from the pioneering [Leeds Data Mill](http://leedsdatamill.org/), some of which was created by Student Data Labs. For the purposes of the practical tutorials, some of the data has been cleaned before the event. In addition, a series of open data - [Cycling Crash](http://leedsdatamill.org/dataset/cycling-accidents-in-leeds) and [Pedestrian Casualty](http://leedsdatamill.org/dataset/pedestrian-casualties-in-leeds) datasets - were created and published by Founder Liam Bolton.
 
