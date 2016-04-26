@@ -23,7 +23,7 @@ To find out more about the context of road casualties in Leeds, visit a [data pr
 ![](https://studentdatalabs.files.wordpress.com/2016/04/screen-shot-2016-04-16-at-21-54-23-e1461612829626.png)
 
 ##Data
-The Labs make use of open data - that is, data that has been made open and freely available to the public. We are using open data from the pioneering [Leeds Data Mill](http://leedsdatamill.org/), some of which was created by Student Data Labs. In addition, a series of open datasets on [cycling crashes](http://leedsdatamill.org/dataset/cycling-accidents-in-leeds) and [pedestrian casualties](http://leedsdatamill.org/dataset/pedestrian-casualties-in-leeds) were created and published by Founder Liam Bolton.
+The Labs make use of open data - that is, data that has been made open and freely available to the public. We are using open data from the pioneering [Leeds Data Mill](http://leedsdatamill.org/), some of which was created by Student Data Labs. In addition, a series of open datasets on [cycling crashes](http://leedsdatamill.org/dataset/cycling-accidents-in-leeds) and [pedestrian casualties](http://leedsdatamill.org/dataset/pedestrian-casualties-in-leeds) were created and published by Founder Liam Bolton. Another useful source is the Department for Transport's [Stats19](https://data.gov.uk/dataset/road-accidents-safety-data) road safety open data.
 
 ##Resources
 Under Resources, you will find learning materials that will help with those looking to learn more about data science. You can find: practical tutorials, code and presentations that show the data science workflow. As part of the Lab, three tutorials have been produced:
