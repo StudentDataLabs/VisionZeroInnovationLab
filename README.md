@@ -31,6 +31,12 @@ Under Resources, you will find learning materials that will help with those look
 2. [Mapping Cycling Crashes in R](https://rpubs.com/StudentDataLabs/Mapping-Cycling-Crashes).
 3. [Statistical Analysis and Modelling Road Traffic Casualties](http://rpubs.com/StudentDataLabs/Statistical-Analysis-Modelling).
 
+More advanced tutorials for handling **spatial data** in R include:
+
+4. [Robin's presentation on spatial data with R](http://rpubs.com/RobinLovelace/147021)
+5. [Reproducible code and data for estimating geographical distribution of cycle crashes in West Yorkshire (Lovelace et al. 2015)](https://github.com/Robinlovelace/bikeR)
+
+
 You can also check out the resources from our [Health Innovation Lab](https://www.dropbox.com/sh/lpn47z908p8lbub/AAC0f3EaGEzeK_NvjU24NEjUa?dl=0), which contains more tools, projects and videos.
 
 ##Projects
