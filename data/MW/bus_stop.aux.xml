@@ -1,0 +1,12 @@
+<PAMDataset>
+  <Metadata domain="Esri">
+    <MDI key="PyramidResamplingType">NEAREST</MDI>
+  </Metadata>
+  <PAMRasterBand band="1">
+    <Description>bus_stop</Description>
+    <NoDataValue>-2.14748364800000E+009</NoDataValue>
+    <Metadata>
+      <MDI key="RepresentationType">THEMATIC</MDI>
+    </Metadata>
+  </PAMRasterBand>
+</PAMDataset>
