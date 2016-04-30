@@ -107,13 +107,6 @@ prop.table(table(accidents$Sex.of.Casualty))
 install.packages("ggplot2")
 library(ggplot2)
 
-# Create a histogram
-ggplot(accidents, aes(Age.of.Casualty)) + # Initialise the plot
-geom_histogram(binwidth=1, fill="#c0392b", alpha=0.75) + # Set the colour and bar wideth
-labs(title="Road Traffic Accident Casualties by Age", x="Age", y="Number of Accidents") + # Give the chart a title and add axis labels
-theme(axis.text = element_text(size=14, family="Trebuchet MS")) + # Set the font size and type
-geom_hline(yintercept=0, size=0.4, color="black”))
-
 # Mosaic plot of Age and Sex of Casualty
 mosaicplot(accidents$Age.of.Casualty ~ accidents$Sex.of.Casualty, 
           main="", # Leave the plot title blank
