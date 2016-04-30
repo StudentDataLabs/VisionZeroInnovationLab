@@ -27,7 +27,7 @@ The Labs make use of open data - that is, data that has been made open and freel
 
 ##Resources
 Under Resources, you will find learning materials that will help with those looking to learn more about data science. You can find: practical tutorials, code and presentations that show the data science workflow. As part of the Lab, three tutorials have been produced:
-1. [Exploring and Cleaning Road Casualty Data in R](https://rpubs.com/StudentDataLabs/Exploring-Cleaning-Data).
+1. [Exploring and Cleaning Road Casualty Data in R](https://rpubs.com/StudentDataLabs/Data-Exploration-Cleaning).
 2. [Mapping Cycling Crashes in R](https://rpubs.com/StudentDataLabs/Mapping-Cycling-Crashes).
 3. [Statistical Analysis and Modelling Road Traffic Casualties](http://rpubs.com/StudentDataLabs/Statistical-Analysis-Modelling).
 
