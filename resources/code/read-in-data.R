@@ -1,5 +1,5 @@
 # Aim: read in and plot some safety data
-
+install.packages("sp")
 library(sp)
 
 leeds = read.csv("data/leeds-2014.csv")
