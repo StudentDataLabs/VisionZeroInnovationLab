@@ -100,7 +100,7 @@ Download R Studio [here](https://www.rstudio.com/products/rstudio/download/).
 
 The code and demos have been published online to RPubs. The links can be found below:
 
-1.	[Data Exploration and Cleaning](https://rpubs.com/StudentDataLabs/Exploring-Cleaning-Data)
+1.	[Data Exploration and Cleaning](https://rpubs.com/StudentDataLabs/Data-Exploration-Cleaning)
 
 2.	[Mapping Cycling Crashes in R](https://rpubs.com/StudentDataLabs/Mapping-Cycling-Crashes)
 
