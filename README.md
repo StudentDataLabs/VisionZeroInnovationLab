@@ -7,7 +7,7 @@ Student Data Labs runs data-driven Innovation Labs for university students to le
 
 The Vision Zero Innovation Lab is split into two sections - a Learning Lab and a Innovation Lab. The Learning Lab helps students learn real-world data skills - getting them up and running with tools like R as well as common data science problems as part of a team. The Innovation Lab is more experimental, where the aim is to develop ideas and data-driven tools to take on wicked problems.
 
-####Vision Zero
+#### Vision Zero
 Vision Zero is an international [road safety project](http://www.visionzeroinitiative.com/) that was first pioneered in Sweden in 1997. The aim of the initiative is to reduce the number of road deaths and permanent injuries to zero. Acknowledging the accidents are unavoidable, it takes a systems design approach to road safety. This includes tackling the public health issue through more effective engineering (designing safer cars and cities), education (encouraging road users to be more aware of pedestrians, for example) as well as enforement (speed controls).
 
 ![](https://studentdatalabs.files.wordpress.com/2016/04/screen-shot-2016-04-22-at-18-51-37.png)
