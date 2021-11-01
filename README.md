@@ -39,7 +39,4 @@ You can also check out the resources from our [Health Innovation Lab](https://ww
 ## Projects
 The Vision Zero Innovation Lab is a place for volunteers to develop data-driven projects and exchange ideas. Data Lab Volunteers can use the Lab to build tools such as apps, maps or more conceptual ideas and designs. Once the Lab has finished, the projects will be presented to a number of stakeholders including Leeds City Council. Student Data Labs also works with volunteers on developing longer-term civic projects.
 
-#### Contact
-To get in touch, you can email us <u>studentdatalabs@gmail.com</u> or visit our [website](studentdatalabs.com).
-
 ![](https://studentdatalabs.files.wordpress.com/2016/01/newlogo4-e1460235034568.png)
